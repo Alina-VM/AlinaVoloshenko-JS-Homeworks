@@ -1,14 +1,14 @@
-// //task2
+//task2
 console.log('Voloshenko');
 
-// //task3
+//task3
 let x = 33;
 let y = 'cat';
 alert(`${x}, ${y}`)
 x = 'cat';
 alert(`${x}, ${y}`)
 
-// //task4
+//task4
 let profile = {
    firstName: 'Alina',
    age: 35,
@@ -21,7 +21,7 @@ let profile = {
 let isAdult;
 isAdult = confirm('are you 18?');
 
-// //task6
+//task6
 const firstName = 'Alina';
 const lastName = 'Voloshenko';
 const Group = 'Lv-722.JS CORE';
@@ -33,7 +33,7 @@ let _second = undefined;
 console.log(typeof(_first))
 console.log(typeof(_second))
 
-// //task7
+//task7
 const login = prompt(`Enter your name, please`);
 const email = prompt(`Enter your e-mail, please`);
 const password = prompt(`Enter your password, please`);
