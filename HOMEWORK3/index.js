@@ -1,17 +1,17 @@
 //task1
-const arr = [2, 3, 4, 5];
-let res = 1;
-for (let i = 0; i < arr.length; i++) {
-    res *= arr[i];
-}
-console.log(res);
+// const arr = [2, 3, 4, 5];
+// let res = 1;
+// for (let i = 0; i < arr.length; i++) {
+//     res *= arr[i];
+// }
+// console.log(res);
 
-let i = 0;
-while (i < arr.length) {
-    res *= arr[i];
-    i++;
-}
-console.log(res);
+// let i = 0;
+// while (i < arr.length) {
+//     res *= arr[i];
+//     i++;
+// }
+// console.log(res);
 
 // task2
 // for (let i = 0; i <= 15; i++) {
@@ -95,16 +95,19 @@ console.log(res);
 // console.log(lastElem([3, 4, 10, -5],8));
 
 //task 8
-// function toUppercase(str) {
-//     let newStr = '';
-//     for(let i = 1; i < str.length; i++) {
-//         if (str[i] === ' ' && str[i+1] !== ' ') {
-//             newStr = newStr + str[i] + str[i+1].toUpperCase();
-//             i++;
-//         }  else {
-//             newStr += str[i];
-//         }
-//     }
-//     return str[0].toUpperCase() + newStr;
-// }
+function toUppercase(str) {
+    let newStr = '';
+    for(let i = 1; i < str.length; i++) {
+        if (str[i] === ' ' && str[i+1] !== ' ') {
+            newStr = newStr + str[i] + str[i+1].toUpperCase();
+            i++;
+        }  
+        else {
+            newStr += str[i];
+        }
+    }
+    return str[0].toUpperCase() + newStr;
+}
 // console.log(toUppercase('i love java script'));
+
+console.log('  i love java script'.split(' ').map((l) => l[0] ? l[0].toUpperCase() + l.slice(1) : '').join(' '));
