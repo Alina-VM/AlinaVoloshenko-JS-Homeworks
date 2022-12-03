@@ -1,5 +1,20 @@
 @import 'null.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+@mixin to-sm {
+    @media screen and (max-width: 768px){
+        @content
+    }
+}
+%input-style {
+    border-style: solid;
+    border-radius: 10px;
+    min-height: 35px;
+    width: 100%;
+    margin-top: 10px;
+    border: 3px solid;
+    border-color: white;
+    
+}
 body {
     height: 100%;
     font-family: 'Montserrat';
@@ -27,10 +42,11 @@ body {
     
 }
 .header {
-    max-height: 150px;
+    // min-height: 150px;
     background-color: white;
 		&__nav {
-            display:flex;    
+            display:flex; 
+            align-items: center;   
         }
 		&__item {
             font-size: 20px;
@@ -43,6 +59,16 @@ body {
                 font-weight: 700;
                 margin-right: 40px;
             }        
+        }
+        &__registration {
+            background-color: #38b6ff;
+            text-transform: uppercase;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+                & a {
+                    color: white;
+                }
         }
 }
 .content {
@@ -64,10 +90,15 @@ body {
         font-size: 48px;
         color: white;
         text-align: center;
-        padding-top: 239px;
-        margin-bottom: 218px;
+        padding-top: 190px;
+        margin-bottom: 161px;
         line-height: 52px;
         letter-spacing: 2px;
+        @include to-sm() {
+            font-size: 24px;
+            padding-top: 138px;
+            line-height: 35px;
+        }
     }
 
     &__subtitle {
@@ -84,7 +115,12 @@ body {
         display: flex;
         justify-content: space-between;
         margin-bottom: 40px;
-        
+        @include to-sm() {
+            flex-wrap: wrap;
+            font-size: 24px;
+            padding-top: 40px;
+            justify-content: center;
+        }
     }
 
     &__advantage {
@@ -114,9 +150,136 @@ body {
         font-size: 30px;
         color: white;
         background-color: #38b6ff;
-        padding: 10px;
+        padding: 15px;
         border-radius: 10px;
         margin-bottom: 30px;
+    }
+}
+
+.form-registration {
+    // display: none;
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__type-profile {}
+
+    &__area {}
+
+    &__company {}
+
+    &__status {}
+
+    &__e-mail {}
+
+    &__password {}
+
+    &__repeat-password {}
+
+    &__submit {
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+    }
+}
+.form {
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 40px;
+        text-align: center;
+        color: white;
+        
+    }
+}
+.form-item {
+    margin-bottom: 35px;
+}
+.lable-lastname {
+    
+}
+.input-field, select {
+    @extend %input-style;
+    &~span {
+        display: none;
+    }
+}
+.lable-firstname {
+}
+.lable-company {
+}
+.lable-email {
+}
+.lable-password {
+}
+#main_form {
+    background-color: #38b6ff;
+    padding: 40px;
+    border-radius: 10px;
+}
+label {
+    font-size: 18px;
+    color: white;   
+}
+.sub-button {
+    background-color: green;
+    text-transform: uppercase;
+    color: white;
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 20px;
+    
+}
+.error {
+    border-color: red;    
+    &~span {
+        font-size: 14px;
+        color: black;
+        display: block;
+        
+    }   
+}
+.erroremail {
+    border-color: red;    
+    &~span {
+        font-size: 14px;
+        color: black;
+        display: block;
+        
+    }   
+}
+.thanksregoff {
+    display: none;
+}
+.thanksreg {
+    display: block;
+    margin-top: 40px;
+    &__text {
+        color: white;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+
+    &__link {
+        & a {
+            font-size: 20px;
+        }
+
+    }
+    &__row {
+        background-color: #38b6ff;
+        flex-direction: column;
+        max-width: 768px;
+        justify-content: center;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 40px;
     }
 }
 

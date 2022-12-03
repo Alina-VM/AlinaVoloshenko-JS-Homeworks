@@ -75,6 +75,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+.input-field, select {
+  border-style: solid;
+  border-radius: 10px;
+  min-height: 35px;
+  width: 100%;
+  margin-top: 10px;
+  border: 3px solid;
+  border-color: white;
+}
+
 body {
   height: 100%;
   font-family: "Montserrat";
@@ -105,11 +115,11 @@ body {
 }
 
 .header {
-  max-height: 150px;
   background-color: white;
 }
 .header__nav {
   display: flex;
+  align-items: center;
 }
 .header__item {
   font-size: 20px;
@@ -122,6 +132,16 @@ body {
 .header__item-first {
   font-weight: 700;
   margin-right: 40px;
+}
+.header__registration {
+  background-color: #38b6ff;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.header__registration a {
+  color: white;
 }
 
 .content {
@@ -142,10 +162,17 @@ body {
   font-size: 48px;
   color: white;
   text-align: center;
-  padding-top: 239px;
-  margin-bottom: 218px;
+  padding-top: 190px;
+  margin-bottom: 161px;
   line-height: 52px;
   letter-spacing: 2px;
+}
+@media screen and (max-width: 768px) {
+  .content__title {
+    font-size: 24px;
+    padding-top: 138px;
+    line-height: 35px;
+  }
 }
 .content__subtitle {
   font-weight: 700;
@@ -159,6 +186,14 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .content__advantages {
+    flex-wrap: wrap;
+    font-size: 24px;
+    padding-top: 40px;
+    justify-content: center;
+  }
 }
 .content__advantage {
   display: flex;
@@ -184,9 +219,104 @@ body {
   font-size: 30px;
   color: white;
   background-color: #38b6ff;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
   margin-bottom: 30px;
+}
+
+.form-registration__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form-registration__submit {
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.form__title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-align: center;
+  color: white;
+}
+
+.form-item {
+  margin-bottom: 35px;
+}
+
+.input-field ~ span, select ~ span {
+  display: none;
+}
+
+#main_form {
+  background-color: #38b6ff;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+label {
+  font-size: 18px;
+  color: white;
+}
+
+.sub-button {
+  background-color: green;
+  text-transform: uppercase;
+  color: white;
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.error {
+  border-color: red;
+}
+.error ~ span {
+  font-size: 14px;
+  color: black;
+  display: block;
+}
+
+.erroremail {
+  border-color: red;
+}
+.erroremail ~ span {
+  font-size: 14px;
+  color: black;
+  display: block;
+}
+
+.thanksregoff {
+  display: none;
+}
+
+.thanksreg {
+  display: block;
+  margin-top: 40px;
+}
+.thanksreg__text {
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+.thanksreg__link a {
+  font-size: 20px;
+}
+.thanksreg__row {
+  background-color: #38b6ff;
+  flex-direction: column;
+  max-width: 768px;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
