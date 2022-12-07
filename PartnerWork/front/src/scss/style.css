@@ -1,0 +1,338 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.input-field, select {
+  border-style: solid;
+  border-radius: 10px;
+  min-height: 35px;
+  width: 100%;
+  margin-top: 10px;
+  border: 3px solid;
+  border-color: white;
+  font-size: 19px;
+}
+
+body {
+  height: 100%;
+  font-family: "Montserrat";
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.fullscreen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  background-color: white;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.header__item {
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+.header__item:last-child {
+  margin-right: 0px;
+}
+.header__item-first {
+  font-weight: 700;
+  margin-right: 40px;
+}
+.header__registration {
+  background-color: #38b6ff;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.header__registration a {
+  color: white;
+}
+
+.content {
+  background-image: url("../img/scott-graham-OQMZwNd3ThU-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-grow: 1;
+}
+.content__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 48px;
+  color: white;
+  text-align: center;
+  padding-top: 190px;
+  margin-bottom: 161px;
+  line-height: 52px;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 768px) {
+  .content__title {
+    font-size: 24px;
+    padding-top: 138px;
+    line-height: 35px;
+  }
+}
+.content__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  text-shadow: 1px 1px 22px grey;
+  text-align: center;
+  margin-bottom: 62px;
+}
+.content__advantages {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .content__advantages {
+    flex-wrap: wrap;
+    font-size: 24px;
+    padding-top: 40px;
+    justify-content: center;
+  }
+}
+.content__advantage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+}
+.content__advantage:last-child {
+  margin-right: 0;
+}
+.content__icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 22px;
+}
+.content__description {
+  text-align: center;
+  font-size: 20px;
+}
+.content__button {
+  text-transform: uppercase;
+  font-size: 30px;
+  color: white;
+  background-color: #38b6ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.form-registration__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form-registration__submit {
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.form__title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-align: center;
+  color: white;
+}
+
+.form-item {
+  margin-bottom: 35px;
+}
+
+.input-field ~ span, select ~ span {
+  display: none;
+}
+
+#main_form {
+  background-color: #38b6ff;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+label {
+  font-size: 18px;
+  color: white;
+}
+
+.sub-button {
+  background-color: green;
+  text-transform: uppercase;
+  color: white;
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.error {
+  border-color: red;
+}
+.error ~ span {
+  font-size: 14px;
+  color: black;
+  display: block;
+}
+
+.erroremail {
+  border-color: red;
+}
+.erroremail ~ span {
+  font-size: 14px;
+  color: black;
+  display: block;
+}
+
+.thanksreg {
+  display: block;
+  margin-top: 40px;
+}
+.thanksreg__text {
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+.thanksreg__link a {
+  font-size: 20px;
+}
+.thanksreg__row {
+  background-color: #38b6ff;
+  flex-direction: column;
+  max-width: 768px;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.thanks {
+  display: none;
+}
+
+.form_registrationoff {
+  display: none;
+}
+
+.login__form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #38b6ff;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-item {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
