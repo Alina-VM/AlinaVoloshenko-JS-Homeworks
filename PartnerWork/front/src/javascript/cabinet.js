@@ -91,7 +91,7 @@ function saveDataUser(){
                 document.querySelector('.arrows').style.display= 'none';
             }
         }
-        getUsers () //почему вызывается здесь?????
+        getUsers () 
     } else if(checkedArr.length == 0) {
         let recomendation__title = document.createElement('div');
         recomendation__title.classList.add('recomendation__title');
