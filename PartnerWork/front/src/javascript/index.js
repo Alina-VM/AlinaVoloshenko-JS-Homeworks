@@ -1,7 +1,7 @@
 
 //списки select для реєстрації
 const typeProfileArr = ['Компанія', 'Експерт'];
-const areaArr = ['Автосервіс',	'Архітектура, дизайн',	'Готельно-ресторанний бізнес',	'Державні організації',	'Консалтинг, аудит, бухгалтерія',	'IT',	'Маркетинг',	'Медицина та краса',	'Нерухомість',	'Некомерційні організації',	'Освіта, наука',	'Оптова торгівля, дистрибуція, імпорт, експорт', 'Охорона, безпека', 'Пошук персоналу, HR',	'Промисловiсть', 'Роздрібна торгівля',	'ЗМІ, поліграфія',	'Сільське господарство',	'Будівництво',	'Телекомунікації',	'FMCG, продукти харчування',	'Транспорт, логістика',	'Туризм',	'Фармацевтика, аптеки',	'Фінанси, банки, страхування',	'Cпорт', 'Шоу-бізнес',	'Енергетика',	'Юриспруденція'];
+const areaArr = ['Автосервіс',	'Архітектура, дизайн',	'Готельно-ресторанний бізнес',	'Державні організації',	'Консалтинг, аудит, бухгалтерія',	'IT',	'Маркетинг',	'Медицина та краса',	'Нерухомість',	'Некомерційні організації',	'Освіта, наука', 'Охорона, безпека', 'Пошук персоналу, HR',	'Промисловiсть', 'Роздрібна торгівля',	'ЗМІ, поліграфія',	'Сільське господарство',	'Будівництво',	'Телекомунікації',	'FMCG, продукти харчування',	'Транспорт, логістика',	'Туризм',	'Фармацевтика, аптеки',	'Фінанси',	'Cпорт', 'Шоу-бізнес',	'Енергетика',	'Юриспруденція'];
 const statusArr = ['Шукаю партнера', 'Шукаю спонсора', 'Я спонсор', 'Я експерт'];
 //об'єкт нового користувача
 let newUser = {};
@@ -20,13 +20,12 @@ function selectType(arr, selector) {
 selectType(typeProfileArr, '#type-profile');
 selectType(areaArr, '#area');
 selectType(statusArr, '#status');
-//функція запису даних інпутів з реєстрації у об'єкт користувача
+//функція 1 запису даних інпутів з реєстрації у об'єкт користувача
 function saveUser() {    
     form.submit.addEventListener('click', function(){
             newUser.lastname = form.lastname.value;
             newUser.firstname = form.firstname.value;
             newUser.company = form.company.value;
-            console.log(newUser);
             if (checkForm()) {
                 sendUser(newUser)  
                 resetForm() 
@@ -34,13 +33,12 @@ function saveUser() {
     });
 }
 saveUser();
-//функція запису даних селектів з реєстрації у об'єкт користувача
+//функція 2 запису даних селектів з реєстрації у об'єкт користувача
 function getSelectItem() {
     const selects = document.querySelectorAll('select');
     for(let i = 0; i<selects.length; i++) {
         selects[i].addEventListener('change', function(event){
             newUser[event.target.name] = event.target.value;
-            console.log(newUser);
         });
     }    
 }
@@ -85,12 +83,7 @@ function resetForm() {
     document.getElementById('main_form').classList.add('form_registrationoff');
 
 }
-//функція збереження даних в файл json
-async function getUsers () {
-    const response = await fetch('http://localhost:3000/api/users/');
-    const data = await response.json(); // read the response in JSON format
-    console.log(data);
-}
+//функція відправки юзера на сервер
 async function sendUser(newUser) {
     const response = await fetch('http://localhost:3000/api/users/', {     
         method: 'POST',   
@@ -101,5 +94,5 @@ async function sendUser(newUser) {
     });
     return await response.json();
 }
-getUsers()
+
 

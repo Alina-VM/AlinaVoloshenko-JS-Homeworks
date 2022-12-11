@@ -8,22 +8,81 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="container">
-                <div class="cabinet">
-                    <div class="cabinet__hello">Привіт, </div>
-                    <section class="main-information">
-                        <div class="cabinet__block personal-data">
-                            <div class="personal-data__area"></div>
-                            <div class="personal-data__status"></div>
+            <header class="header">
+                <div class="container">
+                    <div class="row">
+                        <a href="index.html"><img src="src/img/logo.svg" alt="" class="logo"></a>
+                        <ul class="header__nav">
+                            <li class="header__item header__item-first">Про нас</li>
+                            <li class="header__item"><a href="login.html" target="_blank">Увійти</a></li>
+                        </ul>
+                    </div>
+                </div>    
+            </header>
+            <div class="main-wrapper">
+                <div class="container">
+                    <div class="cabinet">
+                        <div class="cabinet__hello"></div>
+                        <section class="main-information">
+                            <div class="cabinet__block personal-data">
+                                <div class="personal-data__area"></div>
+                                <div class="personal-data__status"></div>
+                            </div>
+                        </section>
+                        <section class="choose">
+                            <div class="choose__title">В якій галузі ви шукаєте партнера?</div>
+                            <div class="choose-block">
+                                <div class="choose-block__part">
+                                    <label for=""><input type="checkbox" name="" id="" value="Автосервіс">Автосервіс</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Архітектура, дизайн">Архітектура, дизайн</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Готельно-ресторанний бізнес">Готельно-ресторанний бізнес</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Державні організації">Державні організації</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Консалтинг, аудит, бухгалтерія">Консалтинг, аудит, бухгалтерія</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="IT">IT</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Маркетинг">Маркетинг</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Медицина та краса">Медицина та краса</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Нерухомість">Нерухомість</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Некомерційні організації">Некомерційні організації</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Освіта, наука">Освіта, наука</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Охорона, безпека">Охорона, безпека</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Пошук персоналу, HR">Пошук персоналу, HR</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Промисловiсть">Промисловiсть</label>
+                                </div>
+                                <div class="choose-block__part">
+                                    <label for=""><input type="checkbox" name="" id="" value="Роздрібна торгівля">Роздрібна торгівля</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="ЗМІ, поліграфія">ЗМІ, поліграфія</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Сільське господарство">Сільське господарство</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Будівництво">Будівництво</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Телекомунікації">Телекомунікації</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="FMCG, продукти харчування">FMCG, продукти харчування</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Транспорт, логістика">Транспорт, логістика</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Туризм">Туризм</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Фармацевтика, аптеки">Фармацевтика, аптеки</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Фінанси">Фінанси</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Cпорт">Cпорт</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Шоу-бізнес">Шоу-бізнес</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Енергетика">Енергетика</label>
+                                    <label for=""><input type="checkbox" name="" id="" value="Юриспруденція">Юриспруденція</label>
+                                </div>    
+                            </div>
+                            <button class="choose-block__button">Обрати</button>
+                        </section><div class="arrows">
+                            <img class="arrow-left" src="../src/img/chevron_left_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                            <img class="arrow-right" src="../src/img/chevron_right_FILL0_wght400_GRAD0_opsz48.svg" alt="">
                         </div>
-                    </section>
-                    <section class="choose">
-                        <div class="choose-block">
-                            
-                        </div>
-                    </section>
+                        <section class="recomendation">
+                            <!-- <div class="recomendation__title">Відповідно до вашого вибору, рекомендуємо до співпраці наступні компанії. Ви можете зв'язатися з представниками зручним способом!</div> -->
+                        <!-- <div class="recomendation-card"> 
+                                <div class="recomendation-card__company">Тут буде назвакомпанії</div>
+                                <div class="recomendation-card__firstname">Тут буде ім'я представника</div>
+                                <div class="recomendation-card__area">Тут буде сфера діяльності</div>
+                                <button class="recomendation-card__butoon">Відправити повідомлення</button>
+                            </div> -->               
+                        </section>
+                    </div>
                 </div>
             </div>
+            
         </div>
         <script src="src/javascript/cabinet.js"></script>
     </body>

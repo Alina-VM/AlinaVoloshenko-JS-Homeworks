@@ -260,7 +260,7 @@ body {
   border-radius: 10px;
 }
 
-label {
+.lable-registr {
   font-size: 18px;
   color: white;
 }
@@ -337,6 +337,160 @@ label {
 
 .form-item {
   width: 100%;
+}
+
+.main-wrapper {
+  background-color: #c8ebff;
+  padding-top: 40px;
+}
+
+.cabinet__hello {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.main-information {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.personal-data {
+  font-size: 16px;
+  font-weight: 700;
+}
+.personal-data__area {
+  margin-bottom: 15px;
+}
+.choose {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+.choose__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 33px;
+  text-align: center;
+}
+
+.choose-block {
+  display: flex;
+  justify-content: space-around;
+}
+.choose-block label {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.choose-block__button {
+  text-transform: uppercase;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: rgb(105, 160, 105);
+  transition: background-color 0.2s;
+}
+.choose-block__button:hover {
+  background-color: green;
+}
+
+.recomendation {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.recomendation__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 33px;
+  text-align: center;
+}
+.recomendation__cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.recomendation-card {
+  background-color: #c8ebff;
+  border-radius: 10px;
+  border: 1px solid green;
+  padding: 20px;
+  width: 50%;
+  min-width: 400px;
+  height: 166px;
+  margin-right: 20px;
+}
+.recomendation-card__company {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.recomendation-card__firstname {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.recomendation-card__area {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.recomendation-card__button {
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.arrows {
+  position: absolute;
+  bottom: -188px;
+  position: relative;
+  display: none;
+  z-index: 10;
+}
+
+.arrow-right {
+  right: 0px;
+  position: absolute;
+}
+
+.transitionright {
+  transform: translate(400px, 0px);
+  transition: 0.5s;
+}
+
+.transitionleft {
+  transform: translate(-400px, 0px);
+  transition: 0.5s;
+}
+
+.nouseroff {
+  display: none;
+}
+
+.nouser {
+  display: block;
+  font-size: 28px;
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
