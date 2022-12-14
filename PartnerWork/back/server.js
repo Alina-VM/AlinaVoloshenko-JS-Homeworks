@@ -13,20 +13,6 @@ app.get("/api/users", function(req, res){
     const users = JSON.parse(content);
     res.send(users);
 });
-app.get("/api/users/:email", function(req, res){          
-    const email = req.params.email; // получаем email    
-    const content = fs.readFileSync(filePath, "utf8");
-    const users = JSON.parse(content);   
-    // находим в массиве пользователя по email
-    let user = users.find((user) => user.email === email)
-    // отправляем пользователя
-    if(user){
-        res.send(user);
-    }
-    else{
-        res.status(404).send();
-    }
-});
 app.post("/api/users", jsonParser, function(req, res){    
     const newUser = req.body   
     fs.readFile('data.json', (err, data) => { 
@@ -41,6 +27,7 @@ app.post("/api/users", jsonParser, function(req, res){
         });  
     });    
 });
+
 app.post("/api/users/login", jsonParser, function(req, res) {
     const user = req.body;
     fs.readFile('data.json', (err, data) => { 

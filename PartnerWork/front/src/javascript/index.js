@@ -85,7 +85,7 @@ function resetForm() {
 }
 //функція відправки юзера на сервер
 async function sendUser(newUser) {
-    const response = await fetch('http://localhost:3000/api/users/', {     
+    const response = await fetch('https://jsfundamental.herokuapp.com/api/users', {     
         method: 'POST',   
         headers: {
           'Content-Type': 'application/json'         

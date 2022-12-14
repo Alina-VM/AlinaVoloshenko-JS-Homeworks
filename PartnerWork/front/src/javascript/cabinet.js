@@ -34,7 +34,7 @@ function saveDataUser(){
     if(checkedArr.length>0) {
         localStorage.setItem("checked", JSON.stringify(checkedArr));
         async function getUsers () {
-            const response = await fetch('http://localhost:3000/api/users/');
+            const response = await fetch('https://jsfundamental.herokuapp.com/api/users');
             const data = await response.json(); 
             let newArr = data.filter(function(elem) {
                 for(let i = 0; i<checkedArr.length; i++) {
